@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.shadowfor{
+    box-shadow: 0 4px 6px rgba(248, 241, 241, 0.866), /* bottom */
+              0 -4px 6px rgba(248, 241, 241, 0.866), /* top */
+              4px 0 6px rgba(248, 241, 241, 0.866), /* right */
+              -4px 0 6px rgba(248, 241, 241, 0.866);
+}
+
+.bgfor{
+    background-color: #FBFBFF;
+}
+
+.shadowbottom{
+    box-shadow: 0 4px 6px rgba(248, 241, 241, 0.866);
+}
