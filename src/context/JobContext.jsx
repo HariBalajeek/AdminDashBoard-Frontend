@@ -12,7 +12,7 @@ export const JobProvider = ({children})=>{
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/job/get");
+        const res = await axios.get("https://admindashboard-backend-8tfw.onrender.com/api/job/get");
         const data = res.data;
         setJobs(data);
       } catch (err) {

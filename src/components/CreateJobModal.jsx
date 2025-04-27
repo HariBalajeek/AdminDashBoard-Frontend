@@ -19,7 +19,7 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
       };
       delete formData.minSalary;
       delete formData.maxSalary;
-      const response = await axios.post("http://localhost:3000/api/job/add", formData);
+      const response = await axios.post("https://admindashboard-backend-8tfw.onrender.com/api/job/add", formData);
       console.log(response.data);
       if (response.status === 201 || response.status === 200) {
         console.log("Job created successfully");
