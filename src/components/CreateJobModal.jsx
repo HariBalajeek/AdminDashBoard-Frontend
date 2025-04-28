@@ -7,6 +7,7 @@ import { useJob } from "../context/JobContext";
 
 const CreateJobModal = ({ showModal, setShowModal }) => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { fetchJobs } = useJob();
 
   const onSubmit = async (data) => {
     try {
@@ -24,6 +25,7 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
       if (response.status === 201 || response.status === 200) {
         console.log("Job created successfully");
         toast.success("Job created successfully");
+        fetchJobs(); // Fetch the updated job list
         setShowModal(false);
         reset();
       } else {
