@@ -27,6 +27,8 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
         location: formData.location, 
         jobType: formData.jobType, 
         salaryRange: formData.salaryRange,
+        minSalary: formData.salaryRange.minSalary,
+        maxSalary: formData.salaryRange.maxSalary,
         applicationDeadline: formData.applicationDeadline,
         description: formData.description,
       };
