@@ -28,8 +28,9 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
        
         setShowModal(false);
         reset();
-        fetchJobs(); // Fetch the updated job list after creating a new job
-      } else {
+        setTimeout(() => {
+          fetchJobs();  // Wait 300ms before fetching
+        }, 300);      } else {
         console.log("Error creating job");
         toast.error("Error creating job");
       }
