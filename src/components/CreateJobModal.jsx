@@ -111,11 +111,7 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
                 type="number"
                 placeholder="Min Salary"
                 {...register("minSalary", {
-                  required: "Min Salary is required",
-                  min: {
-                    value: 10000,
-                    message: "Minimum salary should be at least ₹10,000"
-                  }
+                  required: "Min Salary is required"
                 })}
                 className="border p-2 rounded w-full"
               />
@@ -124,11 +120,7 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
                 type="number"
                 placeholder="Max Salary"
                 {...register("maxSalary", {
-                  required: "Max Salary is required",
-                  min: {
-                    value: 10000,
-                    message: "Maximum salary should be at least ₹10,000"
-                  }
+                  required: "Max Salary is required"
                 })}
                 className="border p-2 rounded w-full"
               />
