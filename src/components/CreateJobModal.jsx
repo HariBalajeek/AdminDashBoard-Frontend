@@ -25,9 +25,10 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
       if (response.status === 201 || response.status === 200) {
         console.log("Job created successfully");
         toast.success("Job created successfully");
-        fetchJobs(); // Fetch the updated job list
+       
         setShowModal(false);
         reset();
+        fetchJobs(); // Fetch the updated job list after creating a new job
       } else {
         console.log("Error creating job");
         toast.error("Error creating job");
