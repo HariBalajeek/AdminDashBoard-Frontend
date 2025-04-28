@@ -20,6 +20,18 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
       };
       delete formData.minSalary;
       delete formData.maxSalary;
+
+      const newJob = { 
+        jobTitle: formData.jobTitle, 
+        companyName: formData.companyName,
+        location: formData.location, 
+        jobType: formData.jobType, 
+        salaryRange: formData.salaryRange,
+        applicationDeadline: formData.applicationDeadline,
+        description: formData.description,
+      };
+      // Add this new job to the current job list locally
+      fetchJobs((prevJobs) => [...prevJobs, newJob]);
       const response = await axios.post("https://admindashboard-backend-8tfw.onrender.com/api/job/add", formData);
       console.log(response.data);
       if (response.status === 201 || response.status === 200) {
@@ -28,9 +40,8 @@ const CreateJobModal = ({ showModal, setShowModal }) => {
        
         setShowModal(false);
         reset();
-        setTimeout(() => {
-          fetchJobs();  // Wait 300ms before fetching
-        }, 300);      } else {
+      }
+      else {
         console.log("Error creating job");
         toast.error("Error creating job");
       }
