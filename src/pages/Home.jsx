@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <div className="flex-col gap-5 bg-gray-50">
-      <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-5 w-full py-6 bg-white border-b shadowbottom">
+      <div className="flex flex-wrap md:flex-nowrap items-center justify-evenly gap-5 w-full py-6 bg-white border-b shadowbottom">
 
         {/* Search Bar */}
         <div className="flex items-center gap-2">
